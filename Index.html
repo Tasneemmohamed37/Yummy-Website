@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Exam</title>
+
+    <!-- [ fav icon ] -->
+    <link rel="shortcut icon" href="https://routeegy.github.io/YummyExam/imgs/logo.png" type="image/x-icon">
+    <!-- [ font awesome ] -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- [ bootstrap ] -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- [ main style ] -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-black">
+    <!-- ^-------------- [ start loading ] ------------------->
+    <div class="loading w-100 vh-100 position-fixed top-0 start-0 bg-black opacity-75">
+        <span class="loader"></span>
+    </div>
+    <!-- ^-------------- [ end loading ] ------------------->
+
+    <!--~---------------- [ start aside ] --------------->
+    <aside class="position-fixed vh-100">
+        <div class="row h-100 px-2">
+            <div class="sideLinks bg-black col-10 text-white p-4 d-flex flex-column justify-content-between"
+                id="openMenu">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" id="searchBtn">Search</a>
+                    </li>
+                    <li class="pt-3">
+                        <a href="#" id="categoriesBtn">Categories</a>
+                    </li>
+                    <li class="pt-3">
+                        <a href="#" id="areaBtn">Area</a>
+                    </li>
+                    <li class="pt-3">
+                        <a href="#" id="ingredientsBtn">Ingredients</a>
+                    </li>
+                    <li class="pt-3">
+                        <a href="#" id="contactBtn">Contact Us</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="list-unstyled d-flex gap-1">
+                        <li>
+                            <a href="#facebook"><i class="fa-brands fa-facebook" style="color: #fcfcfd;"></i></a>
+                        </li>
+                        <li>
+                            <a href="#twitter"><i class="fa-brands fa-twitter" style="color: #fcfcfd;"></i></a>
+                        </li>
+                        <li>
+                            <a href="#www"><i class="fa-solid fa-globe" style="color: #ffffff;"></i></a>
+                        </li>
+                    </ul>
+                    <p>Copyright Â© 2019 All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="logo col-2 bg-white py-4 d-flex flex-column justify-content-between">
+                <img src="https://routeegy.github.io/YummyExam/imgs/logo.png" alt="logo" class="w-100">
+                <div>
+                    <i class="fa-solid fa-xmark" style="color: #080808; font-size: 36px; cursor: pointer;"
+                        id="closeIcon"></i>
+                    <i class="fa-solid fa-bars" style="color: #080808; font-size: 36px; cursor: pointer;"
+                        id="menuIcon"></i>
+                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#www"><i class="fa-solid fa-globe" style="color: #080808;"></i></a>
+                    </li>
+                    <li>
+                        <a href="#share"><i class="fa-solid fa-share-nodes" style="color: #080808;"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!--~---------------- [ end aside ] --------------->
+
+
+    <!--?---------------- [ start main] --------------->
+    <main>
+        <div class="container pt-5 d-none" id="searchContainer">
+            <div class="row">
+                <div class="col-md-6 text">
+                    <input id="searchByName" class="form-control bg-transparent text-white" type="text"
+                        placeholder="Search By Name">
+                </div>
+                <div class="col-md-6">
+                    <input id="searchByFLetter" class="form-control bg-transparent text-white" type="text"
+                        placeholder="Search By First Letter" maxlength="1">
+                </div>
+            </div>
+        </div>
+        <div class="container py-5" id="mealsContainer">
+            <div class="row" id="mealRow">
+            </div>
+        </div>
+    </main>
+    <!--?---------------- [ end main] --------------->
+
+    <!--!------- [ start meal details ] -------------->
+    <div class="container py-5 text-white d-none" id="mealDetails">
+    </div>
+    <!--!------- [ end meal details ] ---------------->
+
+
+    <!--~------- [ start categories ] ------------->
+    <div class="container py-5 d-none" id="categoriesContainer">
+        <div class="row" id="categoryRow">
+        </div>
+    </div>
+    <!--~------- [ end  categories ] ------------->
+
+
+    <!--^------- [ start Area ] ------------->
+    <div class="container py-5 d-none" id="areaContainer">
+        <div class="row" id="areaRow">
+
+        </div>
+    </div>
+    <!--^------- [ end Area ] ------------->
+
+    <!--&------- [ start Ingredients ] ------------->
+    <div class="container py-5 d-none" id="ingredientsContainer">
+        <div class="row" id="ingredientsRow">
+        </div>
+    </div>
+    <!--&------- [ end Ingredients ] ------------->
+
+
+    <!--*------- [ start contact ] ------------->
+    <div class="container py-5 vh-100 d-flex justify-content-center align-items-center d-none" id="contactContainer">
+        <div class="row" id="contactRow">
+            <div class="col-md-6">
+                <div class="inner py-2">
+                    <input id="contactName" class="form-control bg-transparent text-white" type="text"
+                        placeholder="Enter Your Name">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inner py-2">
+                    <input id="contactEmail" class="form-control bg-transparent text-white" type="email"
+                        placeholder="Enter Your Email">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inner py-2">
+                    <input id="contactPhone" class="form-control bg-transparent text-white" type="text" maxlength="11"
+                        placeholder="Enter Your Phone">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inner py-2">
+                    <input id="contactAge" class="form-control bg-transparent text-white" type="number"
+                        placeholder="Enter Your Age">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inner py-2">
+                    <input id="contactPassword" class="form-control bg-transparent text-white" type="password"
+                        placeholder="Enter Your Password">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inner py-2">
+                    <input id="confirm" class="form-control bg-transparent text-white" type="password"
+                        placeholder="Repassword">
+                </div>
+            </div>
+            <button id="submitBtn" disabled class="btn btn-outline-danger px-2 mt-3 w-auto mx-auto">Submit</button>
+        </div>
+    </div>
+    <!--*------- [ end contact ] ------------->
+
+
+    <!-- [ Jquery ] -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- [ bootstrap js file] -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- [ main js file] -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
